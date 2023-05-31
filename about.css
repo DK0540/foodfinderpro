@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.about{
+    width: 100%;
+    height: 100vh;
+    padding: 78px 0px;
+    background-color: #191919;
+}
+.about img{
+    height: 62vh;
+    width: 570px;
+    margin-left: -50px;
+}
+.about-text{
+    width: 550px;
+}
+.main {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 57px;
+}
+.about-text h1{
+    color: white;
+    font-size: 80px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.about-text h5{
+    color: white;
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+span{
+    color: #f9004d;
+}
+.about-text p{
+    color: #fcfc;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+
+
+.top-logo {
+    width: 120px;
+    height: 40px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 1.2rem;
+    justify-content: center;
+    color: hsl(234, 39%, 85%);
+    text-shadow: 2px -1px 6px hsl(234, 39%, 85%);
+    flex-direction: column;
+  
+  
+  }
+  
+  .top-logo1 {
+    width: 140px;
+    height: 130px;
+    margin-left: 4px;
+    margin-top: -71px;
+    
+  }
+
+ .secicon{
+    position: fixed;
+    top: 74px;
+ }
