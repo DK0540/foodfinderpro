@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <header>
+
+        <a href="#component1">Component 1</a>
+        <a href="#component2">Component 2</a>
+         <a href="#component3">Component 3</a>
+     </header>
+    
+    
+     <div id="app-container"></div>
+
+<script>
+     function handleRouting() {
+        // Get the hash from the URL
+        const hash = window.location.hash.slice(1);
+    
+        // Get the app container element
+        const appContainer = document.getElementById('app-container');
+    
+        // Clear the app container
+        appContainer.innerHTML = '';
+    
+        // Show the appropriate component based on the hash
+        if (hash === 'component1') {
+          // Render component 1
+          appContainer.innerHTML = '<h1>Component 1</h1>';
+        } else if (hash === 'component2') {
+          // Render component 2
+          appContainer.innerHTML = '<h1>Component 2</h1>';
+        } else if (hash === 'component3') {
+          // Render component 3
+          appContainer.innerHTML = '<h1>Component 3</h1>';
+        } else {
+          // Render a default component or handle unknown routes
+          appContainer.innerHTML = '<h1>Page Not Found</h1>';
+        }
+    
+        // Scroll to the component
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    
+      // Handle routing on initial page load
+      handleRouting();
+    
+      // Handle routing on hash change
+      window.addEventListener('hashchange', handleRouting);
+    </script>
+
+    <!-- <script>
+        // Function to handle routing and display the appropriate component
+        function handleRouting() {
+          // Get the hash from the URL
+          const hash = window.location.hash.slice(1);
+      
+          // Get the app container element
+          const appContainer = document.getElementById('app-container');
+      
+          // Clear the app container
+          appContainer.innerHTML = '';
+      
+          // Show the appropriate component based on the hash
+          if (hash === 'component1') {
+            // Render component 1
+            appContainer.innerHTML = '<h1>Component 1</h1>';
+          } else if (hash === 'component2') {
+            // Render component 2
+            appContainer.innerHTML = '<h1>Component 2</h1>';
+          } else if (hash === 'component3') {
+            // Render component 3
+            appContainer.innerHTML = '<h1>Component 3</h1>';
+          } else {
+            // Render a default component or handle unknown routes
+            appContainer.innerHTML = '<h1>Page Not Found</h1>';
+          }
+        }
+      
+        // Handle routing on initial page load
+        handleRouting();
+      
+        // Handle routing on hash change
+        window.addEventListener('hashchange', handleRouting);
+      </script> -->
+</body>
+</html>

@@ -1,13 +1,3 @@
-// Smooth scroll to section on navigation link click
-document.querySelectorAll("nav ul li a").forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
-  });
-});
-
 let pageUrl = "http://localhost:5500/index.html?";
 
 function navigateToPage(pageUrl) {
@@ -164,58 +154,6 @@ const fetchMealsFromApi = async (url, value) => {
  * using the fetchMealsFromApi function. It then maps over the meals data and creates the HTML template
  * for each meal. This HTML template is then added to the DOM.
  */
-//checking code------------------------------------------------------------------>>>>>>
-async function myFunction() {
-  const list = JSON.parse(localStorage.getItem(dbObjectFavList));
-  const inputValue = "bi";
-  const url = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
-  const mealsData = await fetchMealsFromApi(url, inputValue);
-  let html = "";
-  if (mealsData.meals) {
-    html = mealsData.meals
-      .map((element) => {
-        return `<div class="card">
-              <div class="card-top"  onclick="showMealDetails(${
-                element.idMeal
-              }, '${inputValue}')">
-                  <div class="dish-photo" >
-                      <img src="${element.strMealThumb}" alt="">
-                  </div>
-                  <div class="dish-name">
-                      ${element.strMeal}
-                  </div>
-                  <div class="dish-details">
-                      
-                      
-                      <span class="button" onclick="showMealDetails(${
-                        element.idMeal
-                      }, '${inputValue}')">View all</span>
-                   
-                  </div>
-              </div>
-              <div class="card-bottom">
-                  <div class="like">
-  
-                  <i class="fa-solid fa-heart ${
-                    isFav(list, element.idMeal) ? "active" : ""
-                  } " onclick="addRemoveToFavList(${element.idMeal})"></i>
-                  
-                  </div>
-                  <div class="play">
-                      <a href="${element.strYoutube}">
-                          
-                      </a>
-                  </div>
-              </div>
-          </div>
-              `;
-      })
-      .join("");
-    document.getElementById("cards-holder").innerHTML = html;
-  }
-}
-
-//------------------------------------>>>
 
 async function showMealList() {
   const list = JSON.parse(localStorage.getItem(dbObjectFavList));
@@ -466,7 +404,7 @@ async function showFavMealList() {
 
   if (favList.length == 0) {
     html = `<div class="fav-item nothing"> <h1> 
-    please select your favorite recipe..</h1> </div>`;
+        Nothing To Show.....</h1> </div>`;
   } else {
     for (let i = 0; i < favList.length; i++) {
       const favMealList = await fetchMealsFromApi(url, favList[i]);
@@ -483,7 +421,7 @@ async function showFavMealList() {
                 </div>
                 <div class="fav-item-details">
                     <div class="fav-item-name">
-                        <strong class="sidetittle">Name: </strong>
+                        <strong>Name: </strong>
                         <span class="fav-item-text">
                            ${element.strMeal}
                         </span>
@@ -507,77 +445,3 @@ async function showFavMealList() {
 }
 
 updateTask();
-
-//routing pages
-function handleRouting() {
-  // Get the hash from the URL
-  const hash = window.location.hash.slice(1);
-
-  // Get the app container element
-  const appContainer = document.getElementById("app-container");
-
-  // Clear the app container
-  appContainer.innerHTML = "";
-
-  // Show the appropriate component based on the hash
-  if (hash === "component1") {
-    // Render component 1
-    appContainer.innerHTML = "<h1>Component 1</h1>";
-  } else if (hash === "component2") {
-    // Render component 2
-    appContainer.innerHTML =
-      '<div class="about"> <div class="main"><img src="images/aboutimage.png"><div class="about-text"><h1>About Us</h1><h5>FOOD <span>FINDER</span></h5><p>At Food Finder, We are passionate about connecting food lovers with the best culinary experiences. Our mission is to be your trusted companion on your culinary journey. We strive to curate a comprehensive and diverse database of eateries, catering to different tastes, budgets, and dietary preferences.</p></div></div></div>';
-  } else if (hash === "component3") {
-    // Render component 3
-    appContainer.innerHTML = "<h1>Component 3</h1>";
-  } else {
-    // Render a default component or handle unknown routes
-    appContainer.innerHTML = "<h1>Page Not Found</h1>";
-  }
-
-  // Scroll to the component
-  const element = document.getElementById(hash);
-  if (element) {
-    element.scrollIntoView({ behavior: "smooth" });
-  }
-}
-
-// Handle routing on initial page load
-handleRouting();
-
-// Handle routing on hash change
-window.addEventListener("hashchange", handleRouting);
-
-///------------------------->>>>
-// function handleRouting() {
-//   // Get the hash from the URL
-//   const hash = window.location.hash.slice(1);
-
-//   // Get the app container element
-//   const appContainer = document.getElementById("app-container");
-
-//   // Clear the app container
-//   appContainer.innerHTML = "";
-
-//   // Show the appropriate component based on the hash
-//   if (hash === "component1") {
-//     // Render component 1
-//     appContainer.innerHTML = "<h1>Component 1</h1>";
-//   } else if (hash === "component2") {
-//     // Render component 2
-//     appContainer.innerHTML =
-//       '<div class="about"> <div class="main"><img src="images/aboutimage.png"><div class="about-text"><h1>About Us</h1><h5>FOOD <span>FINDER</span></h5><p>At Food Finder, We are passionate about connecting food lovers with the best culinary experiences. Our mission is to be your trusted companion on your culinary journey. We strive to curate a comprehensive and diverse database of eateries, catering to different tastes, budgets, and dietary preferences.</p></div></div></div>';
-//   } else if (hash === "component3") {
-//     // Render component 3
-//     appContainer.innerHTML = "<h1>Component 3</h1>";
-//   } else {
-//     // Render a default component or handle unknown routes
-//     appContainer.innerHTML = "<h1>Page Not Found</h1>";
-//   }
-// }
-
-// // Handle routing on initial page load
-// handleRouting();
-
-// // Handle routing on hash change
-// window.addEventListener("hashchange", handleRouting);

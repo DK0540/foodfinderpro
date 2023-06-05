@@ -22,10 +22,10 @@
     <script src="https://kit.fontawesome.com/d42a0e31b8.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload="myFunction()">
     <!-- Navigation bar section -->
 
-    <div id="navbar">
+    <!-- <div id="navbar">
         <a href="index.html">
             <div class="top-logo">
                 <img class="top-logo1" src="logo.png" alt="img">
@@ -38,7 +38,7 @@
                 Home
             </h4></div>
         </a>
-        <a href="about.html">
+        <a href="#component2">
             <div><h4>
                 About
             </h4></div>
@@ -58,39 +58,31 @@
                 <span id="total-counter">0</span>
             </div>
         </div>
-    </div>
-    <!-- <div id="navbar">
+    </div> -->
+    <header>
         <a href="index.html">
-            <div class="top-logo">Food Finder
-                <hr />
-            </div>
+          
+                <div class="top-logo">
+                    <img class="top-logo1" src="logo.png" alt="img">
+                </div>
+            
         </a>
+        <nav>
+          <ul>
+            <li><a href="#flex-box">Home</a></li>
+            <li><a href="#whysection">Why choose us?</a></li>
+            <li><a href="#contactpage">Contact</a></li>
+            <li><a href=".main-content">About</a></li>
+            
+          </ul>
+        </nav>
         <div class="side-drawer">
-          <div class="navbarContent">
-            <div><h4>
-                Home
-            </h4></div>
-            <div></div>
-        </a>
-        <a href="about.html">
-            <div><h4>
-               
-                About
-            </h4></div>
-            <div><h4>
-                Contact
-            </h4></div>
-            <div><h4>
-                Products
-            </h4></div>
-
-          </div>
             <div id="toggle-sidebar">
                 <i class="fa-solid fa-bars"></i>
                 <span id="total-counter">0</span>
             </div>
         </div>
-    </div> -->
+      </header>
 
     <!-- Main content section -->
     <div id="main">
@@ -100,7 +92,7 @@
             <div class="top_gap"></div>
             <hr />
             <div class="title small">
-                Favourable Items
+              <h1>Favourable Items</h1>
             </div>
             <hr />
             <div id="fav">
@@ -110,15 +102,14 @@
 
         <!-- Flex box container for main content -->
         <div id="flex-box">
-            
-            <div class="container">
+            <div class="containermain">
                 
                 <div class="foodnew1">
                     <div class="qtext"><h1 >DELICIOUSLY CRAFTED CULINARY INSPIRATION AT YOUR FINGERTIPS</h1></div>
                 <div>
                     <a href="contact.html">
                         <div >
-                         <button class="btnmain">Contact</button>
+                        
                         </div>
                      </a>
                 </div>
@@ -138,11 +129,115 @@
                     </div>
                 </div>
             </div>
-
+           
             <!-- Cards holder section for displaying meals -->
-            <div id="cards-holder" class="">
+            <div  id="cards-holder" class="">
                 
             </div>
+
+            <!--why choose us-->
+      
+    <section id="whysection">
+        <div class="whytitle">
+            <h1>Why choose Us?</h1>
+        </div>
+        <div class="main-section5">
+            <div class="card5">
+                <img src="/images/fun.jpg" alt="Logo 1" class="card-logo5">
+                <h3>Fun & promote creativity</h3>
+                <p> When individuals are involved in choosing and preparing their meals they are more likely to want to try their creations! Our current and future designs offer a perfect canvas for endless creativity, food exploration and quality time in the kitchen.</p>
+              </div>
+              
+              <div class="card5">
+                <img src="images/healthy.jpg" alt="Logo 2" class="card-logo5">
+                <h3>Promotes Healthy Eating Habits</h3>
+                <p>Parenting experts and nutritionists claim that by making healthy food more fun and appealing.Our products were designed to support you in making your littles the healthiest they can be!</p>
+              </div>
+              
+              <div class="card5">
+                <img src="images/flexibility.jpg" alt="Logo 3" class="card-logo5">
+                <h3>User Flexibility</h3>
+                <p> We have created a unique range of recipes to suit you whatever your previous cooking experience. Whether you are new to cooking, an enthusiastic home cook or a professional chef, you will find a plenty of cooking recipes perfect for you.</p>
+              </div>
+        </div>
+      </section>
+
+            <section id="contactpage">
+
+             
+                
+                <div class="section-header">
+                  <div class="contacttitle">
+                    <h2>Contact Us</h2>
+                    <p>At Food Finder, We are passionate about connecting food lovers with the best culinary experiences. Our mission is to be your trusted companion on your culinary journey. We strive to curate a comprehensive and diverse database of eateries, catering to different tastes, budgets, and dietary preferences.</p>
+                  </div>
+                </div>
+                
+                <div class="container">
+                  <div class="row">
+                    
+                    <div class="contact-info">
+                      <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                          <i class="fas fa-home"></i>
+                        </div>
+                        
+                        <div class="contact-info-content">
+                          <h4>Address</h4>
+                          <p>Belkahalli 3rd stage<br/> Bangalore, Karnataka <br/>540001</p>
+                        </div>
+                      </div>
+                      
+                      <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                          <i class="fas fa-phone"></i>
+                        </div>
+                        
+                        <div class="contact-info-content">
+                          <h4>Phone</h4>
+                          <p>9400002342</p>
+                        </div>
+                      </div>
+                      
+                      <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                          <i class="fas fa-envelope"></i>
+                        </div>
+                        
+                        <div class="contact-info-content">
+                          <h4>Email</h4>
+                         <p>foodfinder@email.com</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                      <form action="" id="contact-form">
+                        <h2>Send Message</h2>
+                        <div class="input-box">
+                          <input type="text" required="true" name="">
+                          <span>Full Name</span>
+                        </div>
+                        
+                        <div class="input-box">
+                          <input type="email" required="true" name="">
+                          <span>Email</span>
+                        </div>
+                        
+                        <div class="input-box">
+                          <textarea required="true" name=""></textarea>
+                          <span>Type your Message...</span>
+                        </div>
+                        
+                        <div class="input-box">
+                          <input type="submit" value="Send" name="">
+                        </div>
+                      </form>
+                    </div>
+                    
+                  </div>
+                </div>
+              </section>
             <footer>
                 <div class="main-content">
                     <div class="left box">

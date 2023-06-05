@@ -54,7 +54,7 @@ res = true;
 return res;
 }
 
-/************\*\*\*\************* Some Useful Utility Functions**************\*************** \*/
+/****\*\*\*\*****\*\*\*\*****\*\*\*\***** Some Useful Utility Functions******\*\*******\*******\*\******* \*/
 
 /\*\*
 
@@ -253,6 +253,7 @@ let html = "";
 const mealDetails = await fetchMealsFromApi(url, itemId);
 if (mealDetails.meals) {
 html = `
+
 <div class="container remove-top-margin">
 
             <div class="header hide">
@@ -404,6 +405,7 @@ const favMealList = await fetchMealsFromApi(url, favList[i]);
 if (favMealList.meals[0]) {
 let element = favMealList.meals[0];
 html += `
+
 <div class="fav-item" onclick="showMealDetails(${
                   element.idMeal
                 },'${generateOneCharString()}')">
@@ -469,3 +471,15 @@ updateTask();
                     
 
 </div>
+
+.header{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 69px;
+background-color: #ffffff;
+display: flex;
+justify-content: space-around; /_ Center the content horizontally _/
+align-items: center;
+}
