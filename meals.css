@@ -214,9 +214,8 @@ body {
     align-items: center;
     flex-direction: row;
     position: relative;
-    right: -115px;
-
-
+    right: -76px;
+    margin-right: 10px;
 }
 
 
@@ -1180,10 +1179,11 @@ section {
   }
 
   .contact-form textarea{
-    font-size: 21px;
+    font-size: 18px;
     width: 290px;
     height: 118px;
-    color: black
+    color: black;
+    padding: 8px;
   }
 
   #success-msg{
