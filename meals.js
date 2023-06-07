@@ -1,13 +1,3 @@
-// Smooth scroll to section on navigation link click
-document.querySelectorAll("nav ul li a").forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
-  });
-});
-
 let pageUrl = "http://localhost:5500/index.html?";
 
 function navigateToPage(pageUrl) {
@@ -216,6 +206,27 @@ async function myFunction() {
 }
 
 //------------------------------------>>>
+
+// Smooth scroll to section on navigation link click
+document.querySelectorAll("nav ul li a").forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
+
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Perform any additional validation here
+
+    // Display success message
+    document.getElementById("success-msg").style.display = "block";
+  });
 
 async function showMealList() {
   const list = JSON.parse(localStorage.getItem(dbObjectFavList));

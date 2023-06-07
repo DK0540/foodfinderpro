@@ -72,9 +72,8 @@
             <li><a href="#flex-box">Home</a></li>
             <li><a href="#whysection">Why choose us?</a></li>
             <li><a href="#contactpage">Contact</a></li>
-            <li><a href=".main-content">About</a></li>
-            
-          </ul>
+            <li><a href="#xyz">About</a></li>
+            </ul>
         </nav>
         <div class="side-drawer">
             <div id="toggle-sidebar">
@@ -163,10 +162,7 @@
       </section>
 
             <section id="contactpage">
-
-             
-                
-                <div class="section-header">
+              <div class="section-header">
                   <div class="contacttitle">
                     <h2>Contact Us</h2>
                     <p>At Food Finder, We are passionate about connecting food lovers with the best culinary experiences. Our mission is to be your trusted companion on your culinary journey. We strive to curate a comprehensive and diverse database of eateries, catering to different tastes, budgets, and dietary preferences.</p>
@@ -212,7 +208,23 @@
                     </div>
                     
                     <div class="contact-form">
-                      <form action="" id="contact-form">
+                      <h1>Contact Form</h1>
+                      <form id="contact-form">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        <br><br>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <br><br>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                        <br><br>
+                        <input class="btnform" type="submit" value="Submit">
+                      </form>
+                      <div id="success-msg" class="success-message" style="display: none;">Message sent successfully!</div>
+
+
+                      <!-- <form action="" id="contact-form">
                         <h2>Send Message</h2>
                         <div class="input-box">
                           <input type="text" required="true" name="">
@@ -232,28 +244,30 @@
                         <div class="input-box">
                           <input type="submit" value="Send" name="">
                         </div>
-                      </form>
+                      </form> -->
                     </div>
                     
                   </div>
                 </div>
               </section>
-            <footer>
-                <div class="main-content">
+
+            
+              <footer id="xyz">
+                <div  class="main-content">
                     <div class="left box">
                         <h2>About us</h2>
                         <div class="content">
+                           
                           <p>At Food Finder, We are passionate about connecting food lovers with the best culinary experiences. Our mission is to be your trusted companion on your culinary journey. We strive to curate a comprehensive and diverse database of eateries, catering to different tastes, budgets, and dietary preferences. </p>
                           <div class="social">
                             <a href="https://www.facebook.com/VahChef.SanjayThumma?ref=hl"><span class="fab fa-facebook-f"></span></a>
-                            <a><span class="fab fa-twitter"></span></a>
-                            <a><span class="fab fa-instagram"></span></a>
                             <a href="https://www.youtube.com/@vahrehvah"><span class="fab fa-youtube"></span></a>
                           </div>
                         </div>
                       </div>
-                  
-              </footer>
+                      </div>
+                </footer>
+         
         </div>  
       
     </div>
